@@ -63,7 +63,7 @@ class Agent:
         # Iterate through all the neighbors
         for neighbor in near_neighbors:
             # Calculate the time to collision
-            tau = self.__time_to_collision(neighbor)
+            tau = self.time_to_collision(neighbor)
 
             # If the tau is infinite then the two agents will never collide
             if tau == float("inf"):
@@ -112,7 +112,7 @@ class Agent:
 
         return vector
 
-    def __time_to_collision(self, other) -> float:
+    def time_to_collision(self, other) -> float:
         """ Calculate time to collision if the two agents keep on the same path
 
         Args:
